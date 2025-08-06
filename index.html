@@ -7,29 +7,60 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Imperium Inkosi</h1>
-      <p>Autoridade. Saber. Domínio.</p>
-      <nav class="hero-nav">
-        <a href="sobre.html" class="btn">Sobre</a>
-        <a href="obras.html" class="btn">Obras</a>
-        <a href="projetos.html" class="btn">Projetos</a>
-        <a href="contato.html" class="btn">Contato</a>
-      </nav>
-    </div>
+  <header class="main-header">
+    <h1>Imperium Inkosi</h1>
+    <nav class="nav-bar">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#obras">Obras</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
   <main class="container">
-    <section>
-      <h2>Bem-vindo ao centro do poder intelectual</h2>
-      <p>Este espaço é dedicado à construção de ideias sólidas, questionamentos profundos e projetos que transcendem o ordinário. Aqui, o pensamento se torna estrutura, e a palavra, ferramenta de transformação.</p>
+
+    <section id="inicio" class="section">
+      <h2>Início</h2>
+      <p>Bem-vindo ao Império de Lord Inkosi, onde ideias se tornam forças.</p>
     </section>
+
+    <section id="sobre" class="section">
+      <h2>Sobre</h2>
+      <p>Lord Inkosi é um arquiteto de ideias, movido por ambição, introspecção e a busca pela verdade.</p>
+    </section>
+
+    <section id="obras" class="section">
+      <h2>Obras</h2>
+      <p>Criações que transcendem o comum. Escritas, visões e projetos pessoais.</p>
+    </section>
+
+    <section id="projetos" class="section">
+      <h2>Projetos</h2>
+      <p>Iniciativas em andamento — jogos, inteligências artificiais e mais.</p>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <p>Entre em contato com o imperador: lord@inkosi.com.br</p>
+    </section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Imperium Inkosi. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // Rolagem suave ao clicar nos links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
