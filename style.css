@@ -197,3 +197,27 @@ footer {
 .email-link a:hover {
   text-decoration: underline;
 }
+
+.obras-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.obra-item {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.obra-item h3 {
+  margin-bottom: 10px;
+  color: #0af;
+}
+
+.obra-item p {
+  color: #ddd;
+  font-size: 1em;
+}
