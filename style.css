@@ -72,3 +72,69 @@ footer {
     padding: 10px;
   }
 }
+
+.projetos-list {
+  list-style-type: disc;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.projetos-list li {
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+.destaques {
+  margin-top: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  color: #eee;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #0af;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para os cards */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
