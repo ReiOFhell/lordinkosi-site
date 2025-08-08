@@ -1,182 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperium - Lord Inkosi</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imperium de Lord Inkosi - Página Inicial</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
+    }
 
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #0a0a0a;
-            color: #f5f5f5;
-            line-height: 1.6;
-        }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 40px;
+      text-align: center;
+      border-bottom: 3px solid gold;
+      position: relative;
+    }
 
-        /* Botão hambúrguer */
-        .menu-btn {
-            font-size: 28px;
-            cursor: pointer;
-            position: fixed;
-            top: 15px;
-            left: 20px;
-            z-index: 1000;
-            color: gold;
-            background: none;
-            border: none;
-        }
+    header h1 {
+      color: gold;
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        /* Menu lateral */
-        .side-menu {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.4s;
-            padding-top: 60px;
-            z-index: 999;
-        }
+    /* Botão hambúrguer */
+    .menu-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: gold;
+      cursor: pointer;
+      z-index: 1000;
+    }
 
-        .side-menu a {
-            padding: 12px 24px;
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
+    /* Menu lateral */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+      border-right: 3px solid gold;
+      z-index: 9999;
+    }
 
-        .side-menu a:hover {
-            background-color: gold;
-            color: black;
-        }
+    .side-menu a {
+      display: block;
+      padding: 15px 25px;
+      color: gold;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
 
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 30px;
-            cursor: pointer;
-            color: white;
-        }
+    .side-menu a:hover {
+      background-color: gold;
+      color: black;
+    }
 
-        /* Cabeçalho */
-        header {
-            text-align: center;
-            padding: 80px 20px 40px;
-            background: linear-gradient(180deg, #000, #111);
-        }
+    .side-menu .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: gold;
+      cursor: pointer;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            color: gold;
-            margin-bottom: 10px;
-        }
+    main {
+      max-width: 900px;
+      margin: 40px auto 60px auto;
+      padding: 20px 30px;
+      border-left: 6px solid gold;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+      line-height: 1.6;
+    }
 
-        header p {
-            font-style: italic;
-            color: #ccc;
-        }
+    main h2 {
+      color: gold;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-        /* Conteúdo principal */
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+    main p {
+      font-size: 1.15rem;
+      color: #ddd;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
 
-        section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: rgba(255,255,255,0.05);
-            border-left: 5px solid gold;
-        }
+    main .highlight {
+      background-color: rgba(255, 215, 0, 0.1);
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+      font-size: 1.25rem;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    }
 
-        section h2 {
-            margin-bottom: 10px;
-            color: gold;
-        }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #777;
+      border-top: 3px solid gold;
+      font-size: 14px;
+    }
 
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #000;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid #333;
-        }
+    @media (max-width: 768px) {
+      main {
+        margin: 70px 20px 40px 20px;
+        border-left: 4px solid gold;
+        padding: 15px;
+      }
 
-        /* Responsivo */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .side-menu a {
-                font-size: 18px;
-            }
-        }
-    </style>
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .side-menu a {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Botão hambúrguer -->
-    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+  <header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h1>Imperium de Lord Inkosi</h1>
+  </header>
 
-    <!-- Menu lateral -->
-    <div id="sideMenu" class="side-menu">
-        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-        <a href="index.html">🏛 Início</a>
-        <a href="sobre.html">📜 Sobre</a>
-        <a href="obras.html">📚 Obras</a>
-        <a href="projetos.html">⚙ Projetos</a>
-        <a href="contatos.html">📨 Contato</a>
-    </div>
+  <nav id="sideMenu" class="side-menu" aria-label="Menu de navegação">
+    <span class="close-btn" onclick="toggleMenu()" aria-label="Fechar menu">&times;</span>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="obras.html">Obras</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="contato.html">Contato</a>
+  </nav>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Imperium de Lord Inkosi</h1>
-        <p>Força, visão e legado em cada passo</p>
-    </header>
+  <main>
+    <h2>Bem-vindo ao Imperium</h2>
+    <p class="highlight">Aqui você encontra a essência do poder, da visão e do legado de Lord Inkosi.</p>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <section>
-            <h2>Bem-vindo</h2>
-            <p>Este é o início da sua jornada pelo Império. Aqui você encontrará obras, projetos e a visão que molda o futuro. Explore cada aba para conhecer mais.</p>
-        </section>
+    <p>Este espaço é dedicado a revelar as múltiplas facetas do Imperium: desde a filosofia que guia suas decisões, às obras literárias que constroem seu universo, projetos ambiciosos em andamento e formas de contato para quem deseja se conectar com essa visão.</p>
 
-        <section>
-            <h2>Destaques</h2>
-            <p>Confira as últimas novidades e projetos em andamento, todos criados para expandir a influência e a grandeza do Imperium.</p>
-        </section>
-    </main>
+    <p>Explore as abas no menu ao lado para navegar por cada área e descobrir mais sobre a grandiosidade que o Imperium representa.</p>
+  </main>
 
-    <!-- Rodapé -->
-    <footer>
-        &copy; 2025 Imperium de Lord Inkosi. Todos os direitos reservados.
-    </footer>
+  <footer>
+    &copy; 2025 Imperium de Lord Inkosi. Todos os direitos reservados.
+  </footer>
 
-    <!-- Script -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("sideMenu");
-            if (menu.style.width === "250px") {
-                menu.style.width = "0";
-            } else {
-                menu.style.width = "250px";
-            }
-        }
-    </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.width = (menu.style.width === "250px") ? "0" : "250px";
+    }
+  </script>
 
 </body>
 </html>
